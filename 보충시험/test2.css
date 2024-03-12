@@ -1,0 +1,120 @@
+#slide-container {
+  width: 1260px;
+  height: 525px;
+  position: relative;
+  display: flex;
+}
+
+.textbox {
+  height: 100%;
+  width: 300px;
+  border: 50px;
+  border-width: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.text-item {
+  height: 30.5px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: gainsboro;
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.text-item.on {
+  border-style: solid;
+  border-width: 3px;
+  border-right-width: 0px;
+  font-weight: bold;
+  background-color: white;
+  translate: all 1s;
+}
+
+.slide-box {
+  border-style: solid;
+  border-width: 0px;
+  padding-left: 295px;
+  width: 1000px;
+  height: 395px;
+  overflow: hidden;
+}
+
+.slide-list {
+  border-style: solid;
+  border-width: 0px;
+  display: flex;
+  height: 395px;
+  /* width: 1000px; */
+  position: relative;
+}
+
+.slide-item {
+  border-style: solid;
+  border-width: 1px;
+  width: 1000px;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity, 2s;
+}
+
+.slide-item.on {
+  opacity: 1;
+}
+
+.btns {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+#pageup-btns {
+  position: absolute;
+}
+
+#pagedown-btns {
+  position: absolute;
+  bottom: 0;
+  /* padding-top: 50px; */
+}
+
+.play-btns {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+#play {
+  position: absolute;
+  right: 0;
+}
+
+#pause {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.play-btns.on #pause,
+.play-btns #play {
+  display: block;
+}
+
+.play-btns.on #play,
+.play-btns #pause {
+  display: none;
+}
