@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+.puzzlesrc {
+  /* display: flex; */
+  margin: auto;
+  border-radius: 16px;
+  background-color: black;
+  height: 1000px;
+  width: 800px;
+  padding: 100px, 100px, 100px, 100px;
+  flex-direction: column;
+}
+
+.bigtext {
+  display: flex;
+  font-size: 100px;
+  color: white;
+  font-weight: 1000;
+  padding-top: 100px;
+  padding-left: 100px;
+  min-width: 700px;
+  min-height: 100px;
+}
+
+.puzzlemargin {
+  margin: auto;
+}
+
+.puzzlearea {
+  /*position: absolute;*/
+  display: flex;
+  height: 90px;
+  width: 1000px;
+  gap: 5px;
+}
+
+.piece {
+  font-size: 50px;
+  color: aqua;
+  height: 70px;
+  width: 60px;
+  background-color: purple;
+  font-size: 32px;
+  font-weight: 100;
+  border-radius: 16px;
+  text-align: center;
+  width: 100px;
+  height: 90px;
+}
+
+.piece-0 {
+  /*position: absolute;*/
+  top: 21%;
+  left: 65.3%;
+  font-size: 50px;
+  color: aqua;
+  height: 70px;
+  width: 60px;
+  background-color: black;
+  font-size: 32px;
+  font-weight: 100;
+  border-radius: 16px;
+  text-align: center;
+  width: 100px;
+  height: 90px;
+}

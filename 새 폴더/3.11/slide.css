@@ -1,0 +1,126 @@
+#slide-container {
+  width: 1000px;
+  height: 500px;
+  position: relative;
+}
+
+.slide-box {
+  width: 1000px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slide-list {
+  width: 6000px;
+  display: flex;
+  transition: transform 1s;
+}
+
+.slide-list.on {
+  transition: transform 1s;
+}
+/* 
+.slide-1 {
+  transform: translateX(-1000px);
+}
+
+.slide-2 {
+  transform: translateX(-2000px);
+}
+
+.slide-3 {
+  transform: translateX(-3000px);
+}
+
+.slide-4 {
+  transform: translateX(-5000px);
+}
+
+.slide-5 {
+  transform: translateX(-5000px);
+}
+
+.slide-6 {
+  transform: translateX(-6000px);
+} */
+
+.slide-item {
+  width: 1000px;
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display ~ align: 중앙 맞춤 */
+  /* 이미지 넣기 전에 div를 하나 더 넣고 높이/너비 준 뒤 img에 따로 높이만 줌 */
+}
+
+.slide-item img {
+  height: 500px;
+  /* 부모 div를 일일히 만들지 않고 이미지에 높이 너비 주고 object-fit 써도 됌 */
+}
+
+.slide-btns {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.pn-btns {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pn-btns button {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+
+.pn-btns #next-btn img {
+  transform: rotate(180deg);
+}
+
+.nav-btns {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+
+.nav span {
+  background-color: wheat;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 10px;
+  transition: all 1s;
+}
+
+.nav span.on {
+  width: 60px;
+  background-color: blueviolet;
+}
+
+.play-btns button {
+  background: none;
+  border: none;
+}
+
+.play-btns.on #pause,
+.play-btns #play {
+  display: block;
+}
+
+.play-btns.on #play,
+.play-btns #pause {
+  display: none;
+}
+
+/* 플레이중(슬라이드 움직일때는) 퍼즈 버튼 보이게, 플레이 버튼 안보이게
+멈춰있을때는 플레이 버튼 보이게 퍼즈 버튼 안보이게 */

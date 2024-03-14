@@ -1,0 +1,115 @@
+#slide-container {
+  width: 2000px;
+  height: 500px;
+  position: relative;
+}
+
+.textbox {
+  /* position: relative; */
+  width: 400px;
+  /* float: left; */
+  border: 50px;
+  /* position: relative; */
+  /* vertical-align: middle; */
+  /* border-style: solid; */
+  border-width: 10px;
+  /* padding-top: 100px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  /* transform: translate(0, -50%); */
+  /* 포지션 앱솔/탑 50/트랜스폼 트랜스레이트로 조정했으나 겹치는 문제로 이미지에 padding 줌 */
+  display: flex;
+  align-items: center;
+  /* justify-content: center;
+  flex-direction: column; */
+}
+
+.text-item {
+  border-style: solid;
+  border-width: 5px;
+  /* border-right-style: none; */
+  background-color: blue;
+  font-size: 52px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-item.on {
+  border-style: solid;
+  border-width: 10px;
+  border-right-width: 0px;
+  background-color: blueviolet;
+  translate: all 1s;
+}
+
+.slide-box {
+  float: left;
+  padding-left: 430px;
+  /* padding-left: 600px; */
+  width: 1000px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slide-list {
+  width: 1000px;
+  display: flex;
+}
+
+.slide-item {
+  width: 1000px;
+  height: 500px;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.slide-item.on {
+  opacity: 1;
+}
+
+.play-btns {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  /* padding-bottom: 300px; */
+  z-index: 1;
+}
+
+#pause {
+  padding-bottom: 50px;
+}
+
+#play {
+  padding-bottom: 50px;
+}
+
+.play-btns button {
+  background: none;
+  border: none;
+}
+
+.play-btns.on #pause,
+.play-btns #play {
+  display: block;
+}
+
+.play-btns.on #play,
+.play-btns #pause {
+  display: none;
+}
+
+/* 
+1. 슬라이드 텍스트 수직 중앙 정렬하는 법
+2. on으로 이중 클래스 부여했는데 밑에 있는데도 적용 안되는 이유 */

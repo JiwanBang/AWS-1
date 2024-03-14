@@ -1,0 +1,61 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>슬라이드</title>
+    <link rel="stylesheet" href="slide.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="slide-container">
+        <div class="slide-box">
+          <div class="slide-list" id="slide-list">
+            <div class="slide-item">
+              <img src="4.jpg" />
+            </div>
+            <div class="slide-item">
+              <img src="1.jpg" />
+            </div>
+            <div class="slide-item">
+              <img src="2.jpg" />
+            </div>
+            <div class="slide-item">
+              <img src="3.jpg" />
+            </div>
+            <div class="slide-item">
+              <img src="4.jpg" />
+            </div>
+            <div class="slide-item">
+              <img src="1.jpg" />
+            </div>
+          </div>
+          <!-- 슬라이드 이미지/버튼 따로따로 -->
+        </div>
+        <div class="slide-btns">
+          <div class="pn-btns">
+            <button id="prev-btn"><img src="arrow_black.png" /></button>
+            <button id="next-btn"><img src="arrow_black.png" /></button>
+          </div>
+          <div class="nav-btns">
+            <div class="nav" id="nav">
+              <span class="on"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="play-btns on" id="play-btns">
+              <button id="pause">
+                <img src="main_slide_pause.png" />
+              </button>
+              <button id="play">
+                <img src="main_slide_play.png" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="slide.js"></script>
+  </body>
+</html>
