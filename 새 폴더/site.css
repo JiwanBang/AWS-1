@@ -1,0 +1,28 @@
+#table-area {
+  width: 1500px;
+  height: 2000px;
+  border-style: solid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  display: flex;
+}
+
+/* .table-head {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+} */
+
+.headArea {
+  background-color: aqua;
+  height: 100px;
+}
+
+.listArea {
+  border-style: solid;
+  background-color: blueviolet;
+  width: 1000px;
+  height: 100px;
+}
