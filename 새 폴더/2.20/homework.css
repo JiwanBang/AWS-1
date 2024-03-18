@@ -1,0 +1,196 @@
+.btns{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    gap: 16px;
+    max-width: 1000px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.btns{
+    padding-left: 300px;
+    padding-bottom: 200px;
+}
+
+.h-btn{
+    font-size: 32px;
+    color: white;
+    border-radius: 16px;
+    padding: 32px;
+    min-width: 300px;
+    width: 200px;
+    text-align: center;
+    flex: 1;
+    display: block;
+}
+
+.hashtag{
+    font-size: 15px;
+    color:gray;
+    text-align: center;
+}
+.h-btn.a1{
+    background-color: blue;
+}
+
+.h-btn.a2{
+    background-color: pink;
+}
+
+.h-btn.a3{
+    background-color: springgreen;
+}
+
+.h-btn:hover {
+    border-radius: 100px;
+    transition: border-radius 1s;
+}
+
+.slide{
+    text-align: center;
+    height: calc(64px*3 + 48px*2);
+    overflow: hidden;
+    top: 0;
+    background-color: aquamarine;
+
+}
+
+.slide-item{
+    font-size: 48px;
+    position: relative;
+    top: -48px;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateY(0);
+    }
+    23%{
+        transform: translateY(-112px);
+    }
+    33%{
+        transform: translateY(-112px);
+    }
+    56%{
+        transform: translateY(-224px);
+    }
+    66%{
+        transform: translateY(-224px);
+    }
+    90%{
+        transform: translateY(-336px);
+    }
+    100%{
+        transform: translateY(-336px);
+    }
+} 
+
+.slide-item {
+    animation: slide 5s infinite;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1300px;
+}
+
+.card {
+    top: 100px;
+    width: 400px;
+    height: 300px;
+    min-width: 400px;
+    background-color: aquamarine;
+    position: relative;
+    text-align: center;
+    
+}
+
+.card .before{
+    width: 400px;
+    height: 300px;
+    box-shadow: -10px -10px 20px rgba(0,0,0,0.5) inset;
+    background-color: azure;
+}
+
+
+.card .after{
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    box-shadow: 10px 10px 20px black;
+    /* transition: opacity 0.5s, left 0.5s; */
+    transition: all 0.5s;
+}
+
+
+.card:hover .after {
+    opacity: 1;
+    /* left: 100px; */
+    border-radius: 100px;
+}
+
+.loofst {
+    background-color: blue;
+    position: relative;
+    height: 400px;
+    width: calc(100px*3 +50px*4);
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.icon1 {
+    font-size: 16px;
+    background-color: red;
+    width: 100px;
+    height: 50px;
+}
+
+@keyframes roundabout {
+    0%{
+        transform: translate(0,0),;
+    }
+    25%{
+        transform: translate(-20px,100px);
+    }
+    50%{
+        transform: translate(-40px,100px);
+    }
+    75%{
+        transform: translate(0.-80px);
+    }
+    100% {
+        transform: translate(0,-100px);
+    }
+}
+
+@keyframes roundabout2 {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-20px);
+    }
+    50%{
+        transform: translateX(-40px);
+    }
+    75%{
+        transform: translateX(-80px);
+    }
+    100% {
+        transform: translateX(-100px);
+    }
+} 
+
+.icon1:nth-child(2n-1) {
+    animation: roundabout 5s infinite;
+}

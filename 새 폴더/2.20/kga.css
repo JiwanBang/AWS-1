@@ -1,0 +1,63 @@
+ul div, ol div{
+    display: list-item;
+}
+
+.flex-container{
+    display: flex;
+    gap: 16px;
+    justify-content: space-around;
+    height: 500px;
+    flex-wrap: wrap;
+}
+
+.h-btn{
+    font-size: 32px;
+    color: white;
+    background-color: black;
+    border-radius: 16px;
+    width: 400px;
+    text-align: center;
+    padding: 32px 0;
+    /* display: inline-block; */
+    /* float: right; */
+    /* flex: 1; */
+    /* height: 150px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 150px; */
+    min-width: 300px;
+}
+
+.b1{
+align-self: flex-start;
+}
+
+.b2{
+align-self: center;
+}
+
+.b3{
+align-self: flex-end;
+}
+
+.c-red{
+    font-size:50px;
+    font-weight: 700;
+}
+
+.o-1{
+    color: rgb(255,0,0);
+    opacity: 0.5;
+}
+
+.o-2{
+    color: rgba(255,0,0,0.5)
+}
+.red-child{
+    color: black;
+}
+
+th, td{
+    padding: 8px 16px;
+}

@@ -1,0 +1,17 @@
+{
+  "folders": [
+	{
+		"path": "../../../../Downloads/number_puzzle"
+	},
+	{
+		"path": ".."
+	},
+	{
+		"name": "AWS-1-1",
+		"path": "../../new repository/AWS-1-1"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "과제 및 저장"
+  }
+}
