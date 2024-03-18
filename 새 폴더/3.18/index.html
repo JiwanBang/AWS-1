@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // console.log(b);
+      // console.log(c);
+      // var b = 2;
+      // function c() {}
+
+      const f = {
+        a: 1,
+        b: 2,
+        c: function () {
+          console.log(this);
+          const d = {
+            getThis: () => {
+              console.log(this);
+            },
+          };
+          d.getThis();
+        },
+        d: () => {
+          console.log(this);
+        },
+      };
+
+      f.c();
+      f.d();
+
+      class Test {
+        a = function () {
+          console.log(this);
+        };
+        b = () => {
+          console.log(this);
+        };
+      }
+
+      const test = new Test();
+      test.a();
+      test.b();
+
+      fetch(
+        "http://127.0.0.1:5500/%EC%83%88%20%ED%8F%B4%EB%8D%94/3.7/puzzle.html"
+      ).then((data) => {
+        console.log(data);
+      });
+    </script>
+  </body>
+</html>
