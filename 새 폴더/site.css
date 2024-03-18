@@ -61,6 +61,10 @@
   border-width: 1px;
 }
 
+.list-name .others {
+  background-color: purple;
+}
+
 .list-who {
   width: 160px;
   border-style: solid;
