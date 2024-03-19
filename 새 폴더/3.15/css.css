@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 
-#wrap {
-}
 #header {
   margin: 0 auto; /*가운데정렬*/
   padding: 12px 20px;
