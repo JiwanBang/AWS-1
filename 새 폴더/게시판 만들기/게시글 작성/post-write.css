@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.table-head {
+  height: 100px;
+  padding: 100px;
+}
+
+.headArea {
+  margin: 0 auto;
+
+  background-color: aqua;
+  width: 500px;
+  height: 100px;
+  text-align: center;
+  font-size: 64px;
+  font-weight: 100;
+}
+
+.category-list {
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 1200px;
+  height: 100px;
+}
+
+.page-tap {
+  margin: 0 auto;
+  width: 1000px;
+  height: 70px;
+  font-size: 32px;
+  gap: 50px;
+  text-align: center;
+  display: flex;
+  border-style: solid;
+  border-width: 0px;
+}
+
+.page-item {
+  margin: 0 auto;
+  width: 200px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.write-area {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.write-menu {
+  margin: 0 auto;
+  padding-top: 50px;
+  border-style: solid;
+  border-width: 0px;
+  font-size: 24px;
+  text-align: center;
+  display: flex;
+}
+
+.write-items {
+  border-style: solid;
+  border-width: 1px;
+  height: 50px;
+}
+
+.write-menu :nth-child(1) {
+  width: 100px;
+}
+
+.write-menu :nth-child(2) {
+  width: 70px;
+}
+
+.write-menu :nth-child(3) {
+  width: 800px;
+}
+
+.menu-bar {
+  width: 1200px;
+}
