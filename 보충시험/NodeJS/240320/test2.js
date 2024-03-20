@@ -6,7 +6,7 @@ let text = "이건 ES6 문법이다.";
 
 // export default { text2: text };
 
-module.expors = {
+module.exports = {
   consoleTest() {
     console.log(text);
   },
