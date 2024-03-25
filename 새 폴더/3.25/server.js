@@ -2,7 +2,7 @@ const net = require("net");
 const fs = require("fs");
 
 const { makeReq } = require("./lib/req");
-const { makeResponse, redirect } = require("./lib/res");
+const { makeResponse, redirect, sendFile } = require("./lib/res");
 const static = require("./lib/static");
 
 const users = [];
@@ -12,8 +12,16 @@ const getMessage = ({ header: { method, path }, body }) => {
 
   if (method == "GET") {
     if (static[path] != undefined) {
-      const body = fs.readFileSync(static[path], { encoding: "utf8" });
-      message = makeResponse("text/html", body);
+      const body = fs.readFileSync(static[path]);
+      if (static[path].indexOf(".js") > 0) {
+        message = makeResponse("text/javascript", body.toString());
+      } else if (static[path].indexOf(".css") > 0) {
+        message = makeResponse("text/css", body.toString());
+      } else if (static[path].indexOf(".png") > 0) {
+        message = sendFile("image/png", body);
+      } else {
+        message = makeResponse("text/html", body.toString());
+      }
     }
   } else if (method == "POST") {
     if (path == "/") {

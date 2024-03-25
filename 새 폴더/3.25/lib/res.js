@@ -22,4 +22,18 @@ Location: /
 `;
 };
 
-module.exports = { makeResponse, redirect };
+//010101 => R : 1, G : 1, B : 1
+//buffer 그 자체로 보내줌(concat 이용)
+
+const sendFile = (type, body) => {
+  const headerBuffer = Buffer.from(`${makeHeader(type, body.length)}
+
+`);
+  const tempBuffer = Buffer.concat(
+    [headerBuffer, body],
+    headerBuffer.length + body.length
+  );
+  return tempBuffer;
+};
+
+module.exports = { makeResponse, redirect, sendFile };
