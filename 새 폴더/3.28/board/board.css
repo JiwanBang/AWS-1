@@ -77,3 +77,9 @@ body {
   flex: 1;
   padding: 0.5rem;
 }
+
+#posting-box {
+  min-width: 10rem;
+  min-height: 10rem;
+  background-color: bisque;
+}

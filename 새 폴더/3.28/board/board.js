@@ -1,4 +1,5 @@
 const listElem = document.getElementById("list");
+const postElem = document.getElementById("posting-box");
 
 class Board {
   static #count = 1; //class 자체에서 불러오게 되는 전역(고정값, 공통값 등에 쓰임)
@@ -6,13 +7,15 @@ class Board {
   #title;
   #writer;
   #createdAt;
+  #posting;
   #isNotice = false;
 
-  constructor(title, writer) {
+  constructor(title, writer, posting) {
     //constructor => 직접 기입하는걸 넣는게 좋음
     this.#id = Board.#count++;
     this.#title = title;
     this.#writer = writer;
+    this.#posting = posting;
     this.#createdAt = this.#createDate();
   }
 
@@ -25,14 +28,12 @@ class Board {
   getTitle = () => this.#title;
   getWriter = () => this.#writer;
   getCreatedAt = () => this.#createdAt;
-  getIIsNotice = () => this.#isNotice;
+  getPosting = () => this.#posting;
+  getIsNotice = () => this.#isNotice;
 }
 
-const list = [
-  new Board("오늘의 점심은?", "이정배"),
-  new Board("오늘의 저녁은?", "이승배"),
-  new Board("오늘의 과제는?", "방지완"),
-];
+const list = [];
+const post = [];
 
 console.log(list);
 
@@ -48,7 +49,7 @@ const reRender = () => {
 
   list.forEach((item) => {
     listElem.innerHTML += `<li class="item${
-      item.getIIsNotice() ? " notice" : ""
+      item.getIsNotice() ? " notice" : ""
     }">
     <ul class="row">
       <li class="box-center num">${item.getId()}</li>
@@ -56,7 +57,12 @@ const reRender = () => {
       <li class="box-center writer">${item.getWriter()}</li>
       <li class="box-center createdAt">${item.getCreatedAt()}</li>
     </ul>
-  </li>`;
+    `;
+  });
+
+  console.log(post);
+  post.forEach((item) => {
+    postElem.innerHTML += `<div class="poster">${item.getPosting()}</div>`;
   });
 };
 
@@ -66,8 +72,18 @@ document.getElementById("add-btn").onclick = (e) => {
   e.preventDefault();
   console.log(e.target.form);
   console.log(e.target.form.title.value);
-  list.push(new Board(e.target.form.title.value, e.target.form.writer.value));
+  const board = new Board(
+    e.target.form.title.value,
+    e.target.form.writer.value,
+    e.target.form.posting.value
+  );
+  list.push(board);
 
-  e.target.form.title.value = e.target.form.writer.value = "";
+  post.push(board);
+
+  e.target.form.title.value =
+    e.target.form.writer.value =
+    e.target.form.posting.value =
+      "";
   reRender();
 };
